@@ -1,1 +1,12 @@
 
+version: 2.1
+workflows:
+  testing:
+    jobs:
+      - runner-test
+jobs:
+  runner-test:
+    machine: true
+    resource_class: ahmedsaad01123/docker01
+    steps:
+      - run: echo "Hi I'm on Runners 2!"
